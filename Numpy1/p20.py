@@ -34,3 +34,12 @@ a2 = np.array([[10, 30, 40], [50, 70, 90]])
 a3 = np.array([40, 20, 30])
 
 print(a3.size * a3.itemsize)
+
+x = np.array([[1, 2],
+              [3, 4],
+              [5, 6]])
+x.shape = (2, 3)
+print(x.dtype)
+x.dtype = 'float64'
+print(x.dtype)
+print(x)
