@@ -1,7 +1,9 @@
 from c import AddressBook
 
 msg = '''1: Add a address
-2: Firstname count
+2: First name count
+3: Last name count
+4: Street name count
 9: Quit
 '''
 
@@ -18,7 +20,11 @@ while True:
         address_book.append(address)
         AddressBook.save(address_book)
     elif choice == 2:
-        print(AddressBook.fname_count(input("Enter firstname: ")))
+        print(AddressBook.fname_count(input("Enter first name: ")))
+    elif choice == 3:
+        print(AddressBook.lname_count(input("Enter last name: ")))
+    elif choice == 4:
+        print(AddressBook.street_count(input("Enter street name: ")))
     else:
         break
 

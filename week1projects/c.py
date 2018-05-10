@@ -64,6 +64,22 @@ class AddressBook:
                 count += 1
         return count
 
+    @classmethod
+    def lname_count(cls, lname):
+        count = 0
+        for address in cls.address_book:
+            if address.lname == lname:
+                count += 1
+        return count
+
+    @classmethod
+    def street_count(cls, street_name):
+        count = 0
+        for address in cls.address_book:
+            if address.street_address == street_name:
+                count += 1
+        return count
+
     def __repr__(self):
         return 'fname: {}, lname: {}, street_address: {}, city: {}, state: {}, country: {}, mobile: {}, email: {}'\
             .format(self.fname, self.lname, self.street_address, self.city, self.state, self.country, self.mobile,
