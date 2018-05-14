@@ -48,5 +48,3 @@ arr4 = np.matmul(arr1, arr2)
 end2 = time.time()
 print(arr4)
 print('time taken: ', end2 - start2)
-
-
