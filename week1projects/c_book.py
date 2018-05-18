@@ -1,4 +1,6 @@
 import pickle
+from nltk.stem import *
+import nltk.tokenize as tkn
 
 
 class AddressBook:
@@ -97,6 +99,17 @@ class AddressBook:
 
     @classmethod
     def street_count(cls, street_name):
+        stemmer = PorterStemmer()
+
+        tokened_words = tkn.word_tokenize(street_name)
+        print(tokened_words)
+        address_words = stemmer.stem(street_name)
+        print(address_words)
+
+        addresses = cls.address_book['addresses']
+        # for address in addresses:
+        #     address.street_address
+
         return cls.address_book['streets'].get(street_name.lower())
 
     @classmethod

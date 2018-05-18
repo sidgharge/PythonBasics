@@ -26,8 +26,8 @@ while True:
         # print(AddressBook.lname_count(input("Enter last name: ")))
         print(AddressBook.count('l_names', input("Enter last name: ")))
     elif choice == 4:
-        # print(AddressBook.street_count(input("Enter street name: ")))
-        print(AddressBook.count('streets', input("Enter street name: ")))
+        print(AddressBook.street_count(input("Enter street name: ")))
+        # print(AddressBook.count('streets', input("Enter street name: ")))
     else:
         break
 
