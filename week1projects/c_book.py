@@ -18,10 +18,6 @@ class AddressBook:
         AddressBook.save()
 
     address_book = {'addresses': [], 'f_names': {}, 'l_names': {}, 'streets': {}}
-    # address_book.addresses = []
-    # address_book.f_names = {}
-    # address_book.l_names = {}
-    # address_book.streets = {}
 
     @classmethod
     def create_address(cls):
@@ -41,6 +37,7 @@ class AddressBook:
                     break
             if not duplicate_mob:
                 break
+
         while True:
             email = input("Enter email: ")
             address_book = cls.address_book
@@ -120,4 +117,5 @@ class AddressBook:
         return 'fname: {}, lname: {}, street_address: {}, city: {}, state: {}, country: {}, mobile: {}, email: {}' \
             .format(self.fname, self.lname, self.street_address, self.city, self.state, self.country, self.mobile,
                     self.email)
+
 
